@@ -8,6 +8,7 @@ from django.http import HttpResponse, JsonResponse
 def index(request):
     return JsonResponse({
         "app": "akrell-hello",
+        "message": "Hello from Kubit",
         "environment": os.environ.get("APP_ENV", "unknown"),
         "version": os.environ.get("APP_VERSION", "dev"),
         "pod": socket.gethostname(),
